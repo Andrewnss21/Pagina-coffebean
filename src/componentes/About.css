@@ -35,8 +35,6 @@
   }
   
   .about-description {
-    font-style: italic;
-    font-size: 30px;
-    line-height: 36px;
-    color: #505054;
+    font-size: 1.125rem;
+    line-height: 1.6;
   }
