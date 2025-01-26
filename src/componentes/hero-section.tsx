@@ -4,7 +4,6 @@ import './Hero.css';  // Importamos el archivo CSS
 const images = [
   'src/assets/image1.jpg',
   'src/assets/image2.jpg',  
-  'src/assets/image3.jpg'   
 ];
 
 const Hero: React.FC = () => {
@@ -21,8 +20,8 @@ const Hero: React.FC = () => {
   return (
     <section className="hero" style={{ backgroundImage: `url(${images[currentImage]})` }}>
       <div className="hero-content">
-        <h1 className="hero-title">Welcome to Coffee Bean</h1>
-        <p className="hero-subtitle">The best coffee in town</p>
+        <h1 className="hero-title">Bienvenido a Tortas de Laura</h1>
+        <p className="hero-subtitle">El mejor cafe de la ciudad</p>
       </div>
     </section>
   );

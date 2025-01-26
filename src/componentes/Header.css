@@ -1,53 +1,84 @@
-.header {
-    width: 100%;  /* Abarca todo el ancho de la página */
-    background: linear-gradient(to right, #38b2ac, #4299e1, #9f7aea);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
+/* Estilo general de la barra de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 50;
+  background-color: #047675;
+  color: #feb0be;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
 
-  }
-  
-  .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .logo a:hover {
-    color: #e2e8f0;
-  }
-  
-  .nav {
-    display: flex;
-  }
-  
-  .nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-item {
-    margin-left: 1.5rem;
-  }
-  
-  .nav-item a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .nav-item a:hover {
-    color: #e2e8f0;
-  }
+/* Logo */
+.logo img {
+  width: 150px;
+  cursor: pointer;
+}
+
+/* Menú */
+.menu {
+  display: flex;
+  position: relative;
+  list-style: none;
+  gap: 50px;
+}
+
+/* Efecto de hover */
+.menu-efecto {
+  position: absolute;
+  background-color: #feb0be;
+  left: var(--left, 0);
+  top: var(--top, 100%);
+  width: var(--width, 0);
+  height: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+/* Estilo de los elementos del menú */
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #feb0be;
+}
+
+.menu-item:hover {
+  color: #047675;
+}
+
+/* Botón */
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.join-button {
+  background-color: #feb0be;
+  color: #047675;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.join-button:hover {
+  background-color: #feb0be;
+  transform: scale(1.05);
+}
