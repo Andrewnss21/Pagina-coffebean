@@ -72,7 +72,7 @@ const NavBar: React.FC = () => {
 
       {/* Botón */}
       <div className="button-container">
-        <button className="join-button">Unirse</button>
+        <button className="join-button">Pedir</button>
       </div>
     </nav>
   );

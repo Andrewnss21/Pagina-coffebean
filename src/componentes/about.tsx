@@ -1,70 +1,89 @@
 import React from "react";
+import { motion, useInView } from "framer-motion"; // Importar Framer Motion
+import { useRef } from "react"; // Para manejar referencias
 import "./About.css";
+import desayuno from "../assets/desayuno.png";
+import bebidas from "../assets/bebidas2.jpg";
+import postres from "../assets/postres2.jpg";
 
 const menuItems = [
   {
-    category: "Desayunos",
     items: [
       {
-        name: "Desayuno Americano",
-        description: "Huevos revueltos, pan tostado, mantequilla y café.",
-        price: "S/ 15.00",
-        image: "/assets/desayuno-americano.jpg",
-      },
-      {
-        name: "Pancakes con Frutas",
-        description: "Pancakes servidos con miel y frutas frescas.",
-        price: "S/ 18.00",
-        image: "/assets/pancakes-frutas.jpg",
+        name: "Desayuno y Almuerzos",
+        image: desayuno,
       },
     ],
   },
   {
-    category: "Bebidas",
     items: [
       {
-        name: "Café Americano",
-        description: "Café preparado con granos seleccionados.",
-        price: "S/ 8.00",
-        image: "/assets/cafe-americano.jpg",
+        name: "Bebidas y Cafés",
+        image: bebidas,
       },
+    ],
+  },
+  {
+    items: [
       {
-        name: "Limonada de Hierba Buena",
-        description: "Limonada fresca con un toque de hierba buena.",
-        price: "S/ 10.00",
-        image: "/assets/limonada-hierba-buena.jpg",
+        name: "Postres",
+        image: postres,
       },
     ],
   },
 ];
 
 const Menu: React.FC = () => {
+  const sectionRef = useRef(null); // Referencia a la sección
+  const isInView = useInView(sectionRef, { once: true }); // Detecta si está visible (una sola vez)
+
   return (
-    <section className="menu-section" id="menu">
+    <section
+      ref={sectionRef} // Asocia la referencia a la sección
+      className="menu-section"
+      id="menu"
+    >
       <h2 className="menu-title">Nuestro Menú</h2>
-      {menuItems.map((category, index) => (
-        <div key={index} className="menu-category">
-          <h3 className="category-title">{category.category}</h3>
-          <div className="category-items">
-            {category.items.map((item, idx) => (
-              <div key={idx} className="menu-item2">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="menu-item-image"
-                />
-                <div className="menu-item-info">
-                  <h4 className="item-name">{item.name}</h4>
-                  <p className="item-description">{item.description}</p>
-                  <span className="item-price">{item.price}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+      <p className="menu-description">
+        Cafés, bebidas calientes y frías, sánguches, ensaladas, pasteles, postres y mucho más.
+      </p>
+      <div className="menu-categories">
+        {menuItems.map((category, index) => (
+          <motion.div
+            key={index}
+            className="menu-category"
+            initial={{ opacity: 0, y: 50 }} // Estado inicial (oculto)
+            animate={isInView ? { opacity: 1, y: 0 } : {}} // Activa animación si está en vista
+            transition={{ duration: 2, delay: index * 0.3 }} // Configuración de la animación
+          >
+            <div className="category-items">
+              {category.items.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="menu-card"
+                  whileHover={{ scale: 1.05, rotate: 1 }} // Animación al pasar el mouse
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <img
+                    src={item.image}
+                    className="menu-card-image"
+                    alt={item.name}
+                  />
+                  <div className="menu-card-text">{item.name}</div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </section>
   );
 };
 
 export default Menu;
+
+
+
+
+
+
