@@ -34,6 +34,11 @@ const Nosotros: React.FC = () => {
             por ofrecer experiencias únicas a través del sabor y la calidad en cada uno de nuestros
             productos. 
           </p>
+          <p className="nosotros-description">
+          Desde el primer día, nuestro compromiso ha sido brindar un espacio acogedor donde las personas
+            puedan reunirse, relajarse y disfrutar de postres caseros y bebidas artesanales. ¡Bienvenido
+            a nuestra familia!
+          </p>
         </div>
         <div className={`nosotros-image ${isVisible ? "visible" : ""}`}>
           <img src={cafeImage} alt="Nuestra cafetería" />

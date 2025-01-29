@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, useInView } from "framer-motion"; // Importar Framer Motion
 import { useRef } from "react"; // Para manejar referencias
-import "./About.css";
+import "./Menu.css";
 import desayuno from "../assets/desayuno.png";
 import bebidas from "../assets/bebidas2.jpg";
 import postres from "../assets/postres2.jpg";

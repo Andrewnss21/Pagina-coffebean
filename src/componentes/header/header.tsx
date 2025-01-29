@@ -60,6 +60,14 @@ const NavBar: React.FC = () => {
         >
           <a>Menu</a>
         </li>
+        <li 
+        className="menu-item"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={() => handleScrollToSection("/componentes/shop/")}
+        >
+          <a>Nosotros</a>
+        </li>
         <li
           className="menu-item"
           onMouseEnter={handleMouseEnter}
