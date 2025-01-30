@@ -1,0 +1,59 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container {
+  width: 100%;
+}
+
+.footer {
+  background: #047675;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-info h2 {
+  color: #feb0be;
+  font-size: 40px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.instagram-link:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+
+.whatsapp-link:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}

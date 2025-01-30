@@ -6,13 +6,13 @@
   right: 0;
   height: 80px;
   z-index: 50;
-  background-color: #03716c;
-  color: white;
+  background-color: #047675;
+  color: #feb0be;
   font-weight: 600;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 /* Logo */
@@ -32,7 +32,7 @@
 /* Efecto de hover */
 .menu-efecto {
   position: absolute;
-  background-color:  #fdb5c0;
+  background-color: #feb0be;
   left: var(--left, 0);
   top: var(--top, 100%);
   width: var(--width, 0);
@@ -54,11 +54,11 @@
 
 .menu-item a {
   text-decoration: none;
-  color: #fdb5c0;
+  color: white;
 }
 
 .menu-item:hover {
-  color: #fdb5c0;
+  color: #047675;
 }
 
 /* Botón */
@@ -68,8 +68,9 @@
 }
 
 .join-button {
-  background-color: #fdb5c0;
-  color: #03716c;
+  width: 100px;
+  background-color: #feb0be;
+  color: #047675;
   font-weight: bold;
   padding: 10px 20px;
   border: none;
@@ -79,6 +80,6 @@
 }
 
 .join-button:hover {
-  background-color: #fdb5c0;
+  background-color: #feb0be;
   transform: scale(1.05);
 }
