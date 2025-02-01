@@ -48,12 +48,4 @@
   opacity: 0.8;
 }
 
-.instagram-link:hover {
-  transition: all 0.3s ease;
-  transform: scale(1.2);
-}
 
-.whatsapp-link:hover {
-  transition: all 0.3s ease;
-  transform: scale(1.2);
-}
