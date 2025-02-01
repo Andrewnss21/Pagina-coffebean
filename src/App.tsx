@@ -1,9 +1,11 @@
 import React from 'react';
-import Header from './componentes/header';
-import Hero from './componentes/hero-section';
-import About from './componentes/about';
-import Shop from './componentes/shop';
-import Contact from './componentes/contacto';
+import Header from './componentes/header/header';
+import Hero from './componentes/Hero/hero-section';
+import About from './componentes/menu';
+import Shop from './componentes/nosotros';
+import Galery from './componentes/galeria';
+import Footer from './componentes/footer/footer';
+
 
 const App: React.FC = () => {
   return (
@@ -12,7 +14,8 @@ const App: React.FC = () => {
       <Hero />
       <About />
       <Shop />
-      <Contact />
+      <Galery />
+      <Footer/>
     </div>
   );
 };
