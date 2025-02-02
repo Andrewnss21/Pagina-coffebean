@@ -24,12 +24,13 @@ const Hero: React.FC = () => {
     >
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1 className="hero-title animate-title">Bienvenido a Coffe Bean</h1>
-        <p className="hero-subtitle animate-subtitle">El mejor café de la ciudad</p>
-        <button className="cta-button">Explorar Menú</button>
+        <h1 className="hero-title animate-slideInLeft">Bienvenido a Coffee Bean</h1>
+        <p className="hero-subtitle animate-slideInRight">El mejor café de la ciudad</p>
+        <button className="cta-button animate-fadeIn">Explorar Menú</button>
       </div>
     </section>
   );
 };
 
 export default Hero;
+

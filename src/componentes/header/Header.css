@@ -1,4 +1,4 @@
-/* Estilo general de la barra de navegación */
+/* === ESTILO GENERAL === */
 .navbar {
   position: fixed;
   top: 0;
@@ -7,21 +7,16 @@
   height: 80px;
   z-index: 50;
   background-color: #047675;
-  color: #feb0be;
+  color: white;
   font-weight: 600;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px;
 }
 
-/* Logo */
-.logo img {
-  width: 150px;
-  cursor: pointer;
-}
 
-/* Menú */
+/* === MENÚ === */
 .menu {
   display: flex;
   position: relative;
@@ -29,7 +24,6 @@
   gap: 50px;
 }
 
-/* Efecto de hover */
 .menu-efecto {
   position: absolute;
   background-color: #feb0be;
@@ -42,12 +36,10 @@
   transition: all 0.3s ease-out;
 }
 
-/* Estilo de los elementos del menú */
+/* === ESTILO DE LOS ITEMS DEL MENÚ === */
 .menu-item {
-  position: relative;
   cursor: pointer;
   font-size: 18px;
-  padding: 10px 0;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
@@ -58,10 +50,10 @@
 }
 
 .menu-item:hover {
-  color: #047675;
+  color: #feb0be;
 }
 
-/* Botón */
+/* === BOTÓN PEDIR === */
 .button-container {
   display: flex;
   align-items: center;
@@ -72,7 +64,7 @@
   background-color: #feb0be;
   color: #047675;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -82,4 +74,52 @@
 .join-button:hover {
   background-color: #feb0be;
   transform: scale(1.05);
+}
+
+/* === MENÚ HAMBURGUESA (RESPONSIVE) === */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #047675;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .join-button {
+    width: 90px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+
+  .join-button {
+    width: 80px;
+    font-size: 12px;
+  }
 }

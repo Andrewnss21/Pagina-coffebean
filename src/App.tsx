@@ -6,6 +6,7 @@ import Shop from './componentes/nosotros';
 import Galery from './componentes/galeria';
 import Footer from './componentes/footer/footer';
 
+
 const App: React.FC = () => {
   return (
     <div className="App">

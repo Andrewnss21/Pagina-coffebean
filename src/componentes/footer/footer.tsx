@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="map-container">
         <iframe
           title="Google Maps"
-          src="https://www.google.com/maps/place/Starbucks+Reserve+Roastery+New+York/@40.7415944,-74.0077298,16z/data=!3m1!5s0x89c259bf6d0ad055:0x716af9ffde9b561b!4m6!3m5!1s0x89c259bf6dd90021:0x645ce21be1b31735!8m2!3d40.7415944!4d-74.0051549!16s%2Fg%2F11j7w8j09h?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.866154865202!2d-73.98695122434213!3d40.75889533442364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c42c21ab%3A0x5cf0c0d6d8f7d1c6!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1706757600000"
           width="100%"
           height="350"
           loading="lazy"
