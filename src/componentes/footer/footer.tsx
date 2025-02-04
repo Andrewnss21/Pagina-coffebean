@@ -28,8 +28,8 @@ const Footer: React.FC = () => {
             <p> info@coffebean.com</p>
             <p> 123 Main St, Anytown, USA</p>
             <div className="social-icons">
-              <a href="https://instagram.com" className="instagram-link"><FaInstagram /></a>
-              <a href="https://whatsapp.com" className="whatsapp-link"><FaWhatsapp /></a>
+              <a href="https://instagram.com"><FaInstagram /></a>
+              <a href="https://whatsapp.com" ><FaWhatsapp /></a>
             </div>
           </div>
         </div>
